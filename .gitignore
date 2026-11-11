@@ -1,0 +1,12 @@
+# Archivos generados por Python
+__pycache__/
+*.pyc
+
+# Log de ejecución local (se regenera al correr main.py)
+logs/software_fj.log
+
+# Entornos virtuales y configuración del editor
+.venv/
+venv/
+.vscode/
+.idea/

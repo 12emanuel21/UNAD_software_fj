@@ -1,0 +1,80 @@
+2026-11-11 08:54:43,917 | INFO     | software_fj.sistema    | ===== Sistema Software FJ iniciado =====
+2026-11-11 08:54:43,917 | INFO     | software_fj.main       | Simulación 01 iniciada: Registrar cliente válido (Ana)
+2026-11-11 08:54:43,917 | INFO     | software_fj.sistema    | Cliente registrado: CLI-0001 | Ana María Torres | Doc. ******9632 | ana.torres@gmail.com
+2026-11-11 08:54:43,917 | INFO     | software_fj.main       | Simulación 01 finalizada
+2026-11-11 08:54:43,917 | INFO     | software_fj.main       | Simulación 02 iniciada: Registrar cliente válido (Carlos, teléfono fijo)
+2026-11-11 08:54:43,917 | INFO     | software_fj.sistema    | Cliente registrado: CLI-0002 | Carlos Pérez | Doc. ****5678 | cperez@empresa.co
+2026-11-11 08:54:43,917 | INFO     | software_fj.main       | Simulación 02 finalizada
+2026-11-11 08:54:43,917 | INFO     | software_fj.main       | Simulación 03 iniciada: Registrar cliente con correo inválido
+2026-11-11 08:54:43,917 | ERROR    | software_fj.sistema    | Registro de cliente falló: [SFJ-100] Dato inválido en 'correo' ('luisa.gomez@'): formato de correo no válido
+2026-11-11 08:54:43,917 | INFO     | software_fj.main       | Simulación 03 finalizada
+2026-11-11 08:54:43,917 | INFO     | software_fj.main       | Simulación 04 iniciada: Registrar cliente con documento inválido
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Registro de cliente falló: [SFJ-100] Dato inválido en 'documento' ('10A45B'): solo debe contener dígitos
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 04 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 05 iniciada: Registrar cliente duplicado
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Registro de cliente falló: [SFJ-200] Ya existe un cliente con el documento 1045789632
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 05 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 06 iniciada: Crear servicios válidos (sala, equipos y asesoría)
+2026-11-11 08:54:43,918 | INFO     | software_fj.sistema    | Servicio creado: SRV-0001 | Sala 'Sala Innovación' | 12 personas | $80,000/hora | Disponible
+2026-11-11 08:54:43,918 | INFO     | software_fj.sistema    | Servicio creado: SRV-0002 | Equipo 'Portátil Core i7' | 5 unidades | $45,000/día | Disponible
+2026-11-11 08:54:43,918 | INFO     | software_fj.sistema    | Servicio creado: SRV-0003 | Equipo 'Proyector 4K' | 2 unidades | $60,000/día | Disponible
+2026-11-11 08:54:43,918 | INFO     | software_fj.sistema    | Servicio creado: SRV-0004 | Asesoría 'Auditoría de seguridad' | Área: Ciberseguridad | Nivel: experto | $120,000/hora | Disponible
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 06 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 07 iniciada: Crear servicio con tarifa negativa
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Creación de servicio ReservaSala falló: [SFJ-100] Dato inválido en 'tarifa' (-5000): debe ser un número mayor que cero
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 07 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 08 iniciada: Crear asesoría con nivel inexistente
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Creación de servicio AsesoriaEspecializada falló: [SFJ-100] Dato inválido en 'nivel' ('maestro'): debe ser uno de ['junior', 'senior', 'experto']
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 08 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 09 iniciada: Reserva de sala exitosa (costo + IVA)
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0001 CONFIRMADA (Ana María Torres -> Sala Innovación)
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0001 PROCESADA. Total: $285,600.00
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 09 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 10 iniciada: Alquiler de equipos con descuento
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0002 CONFIRMADA (Carlos Pérez -> Portátil Core i7)
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0002 PROCESADA. Total: $722,925.00
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 10 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 11 iniciada: Reserva que supera la capacidad de la sala
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Creación de reserva falló: [SFJ-400] No se pudo confirmar la reserva RES-0003
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    |    Causa original: [SFJ-100] Dato inválido en 'asistentes' (25): supera la capacidad de 12 personas
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 11 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 12 iniciada: Reservar un servicio no disponible
+2026-11-11 08:54:43,918 | INFO     | software_fj.servicios  | Servicio Proyector 4K ahora NO disponible
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Creación de reserva falló: [SFJ-300] El servicio 'Proyector 4K' no está disponible
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 12 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 13 iniciada: Asesoría experta con descuento no permitido y reintento
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0005 CONFIRMADA (Ana María Torres -> Auditoría de seguridad)
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Procesamiento de reserva falló: [SFJ-400] No se pudo procesar el pago de RES-0005
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    |    Causa original: [SFJ-100] Dato inválido en 'descuento' (0.2): las asesorías de nivel experto admiten máximo 10 %
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0005 PROCESADA. Total: $960,000.00
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 13 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 14 iniciada: Cancelar una reserva ya procesada
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Cancelación de reserva falló: [SFJ-500] No se puede 'cancelar' una reserva en estado 'procesada'
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 14 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 15 iniciada: Cancelar una reserva confirmada
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0006 CONFIRMADA (Carlos Pérez -> Sala Innovación)
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0006 CANCELADA. Motivo: Reunión aplazada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 15 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 16 iniciada: Procesar reserva con un dato corrupto (cálculo inconsistente)
+2026-11-11 08:54:43,918 | INFO     | software_fj.sistema    | Servicio creado: SRV-0005 | Sala 'Sala Auditorio' | 40 personas | $150,000/hora | Disponible
+2026-11-11 08:54:43,918 | INFO     | software_fj.reserva    | Reserva RES-0007 CONFIRMADA (Ana María Torres -> Sala Auditorio)
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Procesamiento de reserva falló: [SFJ-400] No se pudo procesar el pago de RES-0007
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    |    Causa original: [SFJ-600] Costo calculado inválido (-714000.0) para Sala Auditorio
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 16 finalizada
+2026-11-11 08:54:43,918 | INFO     | software_fj.main       | Simulación 17 iniciada: Reservas con parámetros faltantes o mal tipados
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Creación de reserva falló: [SFJ-101] Falta el parámetro obligatorio 'cliente'
+2026-11-11 08:54:43,918 | ERROR    | software_fj.sistema    | Creación de reserva falló: [SFJ-400] No se pudo confirmar la reserva RES-0008
+2026-11-11 08:54:43,919 | ERROR    | software_fj.sistema    |    Causa original: [SFJ-100] Dato inválido en 'duracion' ('tres'): debe ser un número
+2026-11-11 08:54:43,919 | INFO     | software_fj.main       | Simulación 17 finalizada
+2026-11-11 08:54:43,919 | INFO     | software_fj.main       | Simulación 18 iniciada: Error inesperado (llamada con argumentos faltantes)
+2026-11-11 08:54:43,919 | ERROR    | software_fj.main       | Error inesperado en la simulación 18
+Traceback (most recent call last):
+  File "./main.py", line 30, in ejecutar_simulacion
+    resultado = funcion()  # Ejecuta la operación simulada.
+                ^^^^^^^^^
+  File "./main.py", line 169, in sim18
+    return sistema.registrar_cliente("Sin Datos")  # TypeError: faltan argumentos.
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: GestorSistema.registrar_cliente() missing 3 required positional arguments: 'documento', 'correo', and 'telefono'
+2026-11-11 08:54:43,921 | INFO     | software_fj.main       | Simulación 18 finalizada
+2026-11-11 08:54:43,921 | INFO     | software_fj.main       | ===== Ejecución finalizada: 18 simulaciones =====
